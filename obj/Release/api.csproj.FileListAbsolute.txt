@@ -35,3 +35,5 @@ C:\programacion\api\api_seguiomiento\api_seguiomiento\obj\Release\api.csproj.Cop
 C:\programacion\api\api_seguiomiento\api_seguiomiento\obj\Release\api_seguiomiento.dll
 C:\programacion\api\api_seguiomiento\api_seguiomiento\obj\Release\api_seguiomiento.pdb
 C:\programacion\api\api_seguiomiento\api_seguiomiento\bin\Newtonsoft.Json.pdb
+C:\programacion\api\api_seguiomiento\api_seguiomiento\bin\api_seguiomiento.dll.CodeAnalysisLog.xml
+C:\programacion\api\api_seguiomiento\api_seguiomiento\bin\api_seguiomiento.dll.lastcodeanalysissucceeded

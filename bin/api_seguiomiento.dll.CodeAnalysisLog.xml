@@ -1,0 +1,327 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft visual studio\2017\community\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="15.0">
+ <Targets>
+  <Target Name="C:\programacion\api\api_seguiomiento\api_seguiomiento\bin\api_seguiomiento.dll">
+   <Modules>
+    <Module Name="api_seguiomiento.dll">
+     <Namespaces>
+      <Namespace Name="api_seguimiento.Controllers">
+       <Types>
+        <Type Name="Lista_usuariosController" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#PostEstablecimiento(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Revisar consultas SQL para comprobar si tienen vulnerabilidades de seguridad" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2019-02-15 00:03:49Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\programacion\api\api_seguiomiento\api_seguiomiento\Controllers\Usuarios" File="Lista_usuariosController.cs" Line="86">La cadena de consulta pasada a 'SqlCommand.SqlCommand(string, SqlConnection)' en 'Lista_usuariosController.PostEstablecimiento(string)' podría contener las siguientes variables: 'establecimiento'. Si alguna de estas variables puede proceder de datos proporcionados por el usuario, considere el uso de un procedimiento almacenado o una consulta SQL parametrizada en lugar de compilar la consulta con concatenaciones de cadenas.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="loginController" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Get(System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Revisar consultas SQL para comprobar si tienen vulnerabilidades de seguridad" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2019-02-15 00:03:49Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\programacion\api\api_seguiomiento\api_seguiomiento\Controllers" File="loginController.cs" Line="26">La cadena de consulta pasada a 'SqlCommand.SqlCommand(string, SqlConnection)' en 'loginController.Get(string, string)' podría contener las siguientes variables: 'usr', 'Convert.ToBase64String(array)'. Si alguna de estas variables puede proceder de datos proporcionados por el usuario, considere el uso de un procedimiento almacenado o una consulta SQL parametrizada en lugar de compilar la consulta con concatenaciones de cadenas.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#PostAll(System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Revisar consultas SQL para comprobar si tienen vulnerabilidades de seguridad" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2019-02-15 00:03:49Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\programacion\api\api_seguiomiento\api_seguiomiento\Controllers" File="loginController.cs" Line="59">La cadena de consulta pasada a 'SqlCommand.SqlCommand(string, SqlConnection)' en 'loginController.PostAll(string, string)' podría contener las siguientes variables: 'usr', 'Convert.ToBase64String(array)'. Si alguna de estas variables puede proceder de datos proporcionados por el usuario, considere el uso de un procedimiento almacenado o una consulta SQL parametrizada en lugar de compilar la consulta con concatenaciones de cadenas.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Manejo_fechasController" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#PostDiferencia_semana_anio_iso(System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Revisar consultas SQL para comprobar si tienen vulnerabilidades de seguridad" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2019-02-15 00:03:49Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\programacion\api\api_seguiomiento\api_seguiomiento\Controllers" File="Manejo_fechasController.cs" Line="23">La cadena de consulta pasada a 'SqlCommand.SqlCommand(string, SqlConnection)' en 'Manejo_fechasController.PostDiferencia_semana_anio_iso(string, string)' podría contener las siguientes variables: 'f1', 'f2'. Si alguna de estas variables puede proceder de datos proporcionados por el usuario, considere el uso de un procedimiento almacenado o una consulta SQL parametrizada en lugar de compilar la consulta con concatenaciones de cadenas.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#PostRetornar_fecha_por_semana_de_anio(System.Int32,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Revisar consultas SQL para comprobar si tienen vulnerabilidades de seguridad" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2019-02-15 00:03:49Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\programacion\api\api_seguiomiento\api_seguiomiento\Controllers" File="Manejo_fechasController.cs" Line="44">La cadena de consulta pasada a 'SqlCommand.SqlCommand(string, SqlConnection)' en 'Manejo_fechasController.PostRetornar_fecha_por_semana_de_anio(int, int)' podría contener las siguientes variables: 'si', 'st'. Si alguna de estas variables puede proceder de datos proporcionados por el usuario, considere el uso de un procedimiento almacenado o una consulta SQL parametrizada en lugar de compilar la consulta con concatenaciones de cadenas.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="api_seguimiento.Controllers.matrices">
+       <Types>
+        <Type Name="Evaluacion_matrizController" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#postResultados_etapa(System.String,System.Int32,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Revisar consultas SQL para comprobar si tienen vulnerabilidades de seguridad" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2019-02-15 00:03:49Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\programacion\api\api_seguiomiento\api_seguiomiento\Controllers\matrices" File="Evaluacion_matrizController.cs" Line="78">La cadena de consulta pasada a 'SqlCommand.SqlCommand(string, SqlConnection)' en 'Evaluacion_matrizController.postResultados_etapa(string, int, int)' podría contener las siguientes variables: 'fecha', 'etapa', 'matriz'. Si alguna de estas variables puede proceder de datos proporcionados por el usuario, considere el uso de un procedimiento almacenado o una consulta SQL parametrizada en lugar de compilar la consulta con concatenaciones de cadenas.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#PostUnidad_de_inspeccion_por_etapa(System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Revisar consultas SQL para comprobar si tienen vulnerabilidades de seguridad" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2019-02-15 00:03:49Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\programacion\api\api_seguiomiento\api_seguiomiento\Controllers\matrices" File="Evaluacion_matrizController.cs" Line="47">La cadena de consulta pasada a 'SqlCommand.SqlCommand(string, SqlConnection)' en 'Evaluacion_matrizController.PostUnidad_de_inspeccion_por_etapa(string, string)' podría contener las siguientes variables: 'etapa', 'matriz'. Si alguna de estas variables puede proceder de datos proporcionados por el usuario, considere el uso de un procedimiento almacenado o una consulta SQL parametrizada en lugar de compilar la consulta con concatenaciones de cadenas.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Lista_asignacionesController" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#PosEstatus(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Revisar consultas SQL para comprobar si tienen vulnerabilidades de seguridad" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2019-02-15 00:03:49Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\programacion\api\api_seguiomiento\api_seguiomiento\Controllers\matrices" File="Lista_asignacionesController.cs" Line="85">La cadena de consulta pasada a 'SqlCommand.SqlCommand(string, SqlConnection)' en 'Lista_asignacionesController.PosEstatus(string)' podría contener las siguientes variables: 'estatus'. Si alguna de estas variables puede proceder de datos proporcionados por el usuario, considere el uso de un procedimiento almacenado o una consulta SQL parametrizada en lugar de compilar la consulta con concatenaciones de cadenas.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#PostAsignacion(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Revisar consultas SQL para comprobar si tienen vulnerabilidades de seguridad" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2019-02-15 00:03:49Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\programacion\api\api_seguiomiento\api_seguiomiento\Controllers\matrices" File="Lista_asignacionesController.cs" Line="120">La cadena de consulta pasada a 'SqlCommand.SqlCommand(string, SqlConnection)' en 'Lista_asignacionesController.PostAsignacion(string)' podría contener las siguientes variables: 'Asignacion'. Si alguna de estas variables puede proceder de datos proporcionados por el usuario, considere el uso de un procedimiento almacenado o una consulta SQL parametrizada en lugar de compilar la consulta con concatenaciones de cadenas.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="api_seguimiento.Controllers.revicion_servicios">
+       <Types>
+        <Type Name="cuestionarioController" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Guardar_cuestionario(Newtonsoft.Json.Linq.JObject)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Revisar consultas SQL para comprobar si tienen vulnerabilidades de seguridad" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2019-02-15 00:03:49Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\programacion\api\api_seguiomiento\api_seguiomiento\Controllers\revicion_servicios" File="cuestionarioController.cs" Line="28">La cadena de consulta pasada a 'SqlCommand.SqlCommand(string, SqlConnection)' en 'cuestionarioController.Guardar_cuestionario(JObject)' podría contener las siguientes variables: 'Enumerable.Select&lt;JToken, string&gt;(datos_respuestas["datos_cuestionario"], ...).GetEnumerator().Current'. Si alguna de estas variables puede proceder de datos proporcionados por el usuario, considere el uso de un procedimiento almacenado o una consulta SQL parametrizada en lugar de compilar la consulta con concatenaciones de cadenas.</Issue>
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\programacion\api\api_seguiomiento\api_seguiomiento\Controllers\revicion_servicios" File="cuestionarioController.cs" Line="58">La cadena de consulta pasada a 'SqlCommand.SqlCommand(string, SqlConnection)' en 'cuestionarioController.Guardar_cuestionario(JObject)' podría contener las siguientes variables: 'folio', 'obs[1]'. Si alguna de estas variables puede proceder de datos proporcionados por el usuario, considere el uso de un procedimiento almacenado o una consulta SQL parametrizada en lugar de compilar la consulta con concatenaciones de cadenas.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="guardar_zonaController" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#PostGuardar(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Revisar consultas SQL para comprobar si tienen vulnerabilidades de seguridad" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2019-02-15 00:03:49Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\programacion\api\api_seguiomiento\api_seguiomiento\Controllers\revicion_servicios" File="guardar_zonaController.cs" Line="22">La cadena de consulta pasada a 'SqlCommand.SqlCommand(string, SqlConnection)' en 'guardar_zonaController.PostGuardar(string)' podría contener las siguientes variables: 'zona'. Si alguna de estas variables puede proceder de datos proporcionados por el usuario, considere el uso de un procedimiento almacenado o una consulta SQL parametrizada en lugar de compilar la consulta con concatenaciones de cadenas.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Monitor_servicios_resultadosController" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#PostActivos(System.String,System.String,System.Int32,System.Int32,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Revisar consultas SQL para comprobar si tienen vulnerabilidades de seguridad" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2019-02-15 00:03:49Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\programacion\api\api_seguiomiento\api_seguiomiento\Controllers\revicion_servicios" File="Monitor_servicios_resultadosController.cs" Line="81">La cadena de consulta pasada a 'SqlCommand.SqlCommand(string, SqlConnection)' en 'Monitor_servicios_resultadosController.PostActivos(string, string, int, int, int)' podría contener las siguientes variables: 'f1', 'f2', 'establecimiento', 'departamento', 'cuestionario'. Si alguna de estas variables puede proceder de datos proporcionados por el usuario, considere el uso de un procedimiento almacenado o una consulta SQL parametrizada en lugar de compilar la consulta con concatenaciones de cadenas.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#PostAll(System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Revisar consultas SQL para comprobar si tienen vulnerabilidades de seguridad" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2019-02-15 00:03:49Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\programacion\api\api_seguiomiento\api_seguiomiento\Controllers\revicion_servicios" File="Monitor_servicios_resultadosController.cs" Line="18">La cadena de consulta pasada a 'SqlCommand.SqlCommand(string, SqlConnection)' en 'Monitor_servicios_resultadosController.PostAll(string, string)' podría contener las siguientes variables: 'f1', 'f2'. Si alguna de estas variables puede proceder de datos proporcionados por el usuario, considere el uso de un procedimiento almacenado o una consulta SQL parametrizada en lugar de compilar la consulta con concatenaciones de cadenas.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#PostZonas(System.String,System.String,System.Int32,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Revisar consultas SQL para comprobar si tienen vulnerabilidades de seguridad" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2019-02-15 00:03:49Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\programacion\api\api_seguiomiento\api_seguiomiento\Controllers\revicion_servicios" File="Monitor_servicios_resultadosController.cs" Line="49">La cadena de consulta pasada a 'SqlCommand.SqlCommand(string, SqlConnection)' en 'Monitor_servicios_resultadosController.PostZonas(string, string, int, int)' podría contener las siguientes variables: 'f1', 'f2', 'establecimiento', 'departamento'. Si alguna de estas variables puede proceder de datos proporcionados por el usuario, considere el uso de un procedimiento almacenado o una consulta SQL parametrizada en lugar de compilar la consulta con concatenaciones de cadenas.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="api_seguimiento.Manager.comparativo_resultados">
+       <Types>
+        <Type Name="Comparativo" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Consulta_sql_estado_de_resultados(System.String,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Revisar consultas SQL para comprobar si tienen vulnerabilidades de seguridad" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2019-02-15 00:03:49Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\programacion\api\api_seguiomiento\api_seguiomiento\Manager\Estado_de_resultados" File="Comparativo.cs" Line="50">La cadena de consulta pasada a 'SqlCommand.SqlCommand(string, SqlConnection)' en 'Comparativo.Consulta_sql_estado_de_resultados(string, int)' podría contener las siguientes variables: 'fecha', 'meses'. Si alguna de estas variables puede proceder de datos proporcionados por el usuario, considere el uso de un procedimiento almacenado o una consulta SQL parametrizada en lugar de compilar la consulta con concatenaciones de cadenas.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="api_seguimiento.Manager.Incidencias_personal">
+       <Types>
+        <Type Name="Incidencias_personal_establecimiento" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Obtener_incidencias(System.Int32,System.Int32)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Revisar consultas SQL para comprobar si tienen vulnerabilidades de seguridad" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2019-02-15 00:03:49Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\programacion\api\api_seguiomiento\api_seguiomiento\Manager\Incidencias_personal" File="Incidencias_personal_establecimiento.cs" Line="42">La cadena de consulta pasada a 'SqlCommand.SqlCommand(string, SqlConnection)' en 'Incidencias_personal_establecimiento.Obtener_incidencias(int, int)' podría contener las siguientes variables: 'folio_establecimieto', 'diferencia'. Si alguna de estas variables puede proceder de datos proporcionados por el usuario, considere el uso de un procedimiento almacenado o una consulta SQL parametrizada en lugar de compilar la consulta con concatenaciones de cadenas.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="api_seguimiento.Manager.Orden_de_compra_interna">
+       <Types>
+        <Type Name="Autorizacion_Estatus_OCI" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Actualizar(api_seguimiento.Models.Orden_de_compra_interna.Autirizacion_OCI)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Revisar consultas SQL para comprobar si tienen vulnerabilidades de seguridad" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2019-02-15 00:03:49Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\programacion\api\api_seguiomiento\api_seguiomiento\Manager\Order_de_compra_interna" File="Autorizacion_Estatus_OCI.cs" Line="21">La cadena de consulta pasada a 'SqlCommand.SqlCommand(string, SqlConnection)' en 'Autorizacion_Estatus_OCI.Actualizar(Autirizacion_OCI)' podría contener las siguientes variables: 'autirizacion.Folio', 'autirizacion.Estatus', 'autirizacion.Usiario', 'autirizacion.Pc', 'autirizacion.Ip'. Si alguna de estas variables puede proceder de datos proporcionados por el usuario, considere el uso de un procedimiento almacenado o una consulta SQL parametrizada en lugar de compilar la consulta con concatenaciones de cadenas.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="api_seguimiento.Manager.Order_de_compra_interna">
+       <Types>
+        <Type Name="Detalle_OCI" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Obtener(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Revisar consultas SQL para comprobar si tienen vulnerabilidades de seguridad" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2019-02-15 00:03:49Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\programacion\api\api_seguiomiento\api_seguiomiento\Manager\Order_de_compra_interna" File="Detalle_OCI.cs" Line="20">La cadena de consulta pasada a 'SqlCommand.SqlCommand(string, SqlConnection)' en 'Detalle_OCI.Obtener(int)' podría contener las siguientes variables: 'folio'. Si alguna de estas variables puede proceder de datos proporcionados por el usuario, considere el uso de un procedimiento almacenado o una consulta SQL parametrizada en lugar de compilar la consulta con concatenaciones de cadenas.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Obtener_OCI" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Obtener(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Revisar consultas SQL para comprobar si tienen vulnerabilidades de seguridad" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2019-02-15 00:03:49Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\programacion\api\api_seguiomiento\api_seguiomiento\Manager\Order_de_compra_interna" File="Obtener_OCI.cs" Line="19">La cadena de consulta pasada a 'SqlCommand.SqlCommand(string, SqlConnection)' en 'Obtener_OCI.Obtener(string)' podría contener las siguientes variables: 'estatus'. Si alguna de estas variables puede proceder de datos proporcionados por el usuario, considere el uso de un procedimiento almacenado o una consulta SQL parametrizada en lugar de compilar la consulta con concatenaciones de cadenas.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="api_seguimiento.Manager.Pedido_establecimiento">
+       <Types>
+        <Type Name="Combo_establecimientosBMS" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#ObtenerSQL(System.String)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Revisar consultas SQL para comprobar si tienen vulnerabilidades de seguridad" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2019-02-15 00:03:49Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\programacion\api\api_seguiomiento\api_seguiomiento\Manager\Pedido_establecimiento" File="Combo_establecimientosBMS.cs" Line="25">La cadena de consulta pasada a 'SqlCommand.SqlCommand(string, SqlConnection)' en 'Combo_establecimientosBMS.ObtenerSQL(string)' podría contener las siguientes variables: 'filtro'. Si alguna de estas variables puede proceder de datos proporcionados por el usuario, considere el uso de un procedimiento almacenado o una consulta SQL parametrizada en lugar de compilar la consulta con concatenaciones de cadenas.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="pedido_envarques_por_establecimiento" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Consulta(System.String)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Revisar consultas SQL para comprobar si tienen vulnerabilidades de seguridad" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2019-02-15 00:03:49Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\programacion\api\api_seguiomiento\api_seguiomiento\Manager\Pedido_establecimiento" File="pedido_envarques_por_establecimiento.cs" Line="33">La cadena de consulta pasada a 'SqlCommand.SqlCommand(string, SqlConnection)' en 'pedido_envarques_por_establecimiento.Consulta(string)' podría contener las siguientes variables: 'establecimineto'. Si alguna de estas variables puede proceder de datos proporcionados por el usuario, considere el uso de un procedimiento almacenado o una consulta SQL parametrizada en lugar de compilar la consulta con concatenaciones de cadenas.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Consulta_Productos_embarque(System.String)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Revisar consultas SQL para comprobar si tienen vulnerabilidades de seguridad" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2019-02-15 00:03:49Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\programacion\api\api_seguiomiento\api_seguiomiento\Manager\Pedido_establecimiento" File="pedido_envarques_por_establecimiento.cs" Line="68">La cadena de consulta pasada a 'SqlCommand.SqlCommand(string, SqlConnection)' en 'pedido_envarques_por_establecimiento.Consulta_Productos_embarque(string)' podría contener las siguientes variables: 'folio'. Si alguna de estas variables puede proceder de datos proporcionados por el usuario, considere el uso de un procedimiento almacenado o una consulta SQL parametrizada en lugar de compilar la consulta con concatenaciones de cadenas.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="api_seguimiento.Manager.Productos_clasificador">
+       <Types>
+        <Type Name="Clasificador_obtener_productos" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#ObtenerProducto(System.String,System.String)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Revisar consultas SQL para comprobar si tienen vulnerabilidades de seguridad" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2019-02-15 00:03:49Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\programacion\api\api_seguiomiento\api_seguiomiento\Manager\Productos_clasificador" File="Clasificador_obtener_productos.cs" Line="26">La cadena de consulta pasada a 'SqlCommand.SqlCommand(string, SqlConnection)' en 'Clasificador_obtener_productos.ObtenerProducto(string, string)' podría contener las siguientes variables: 'folio', 'establecimiento'. Si alguna de estas variables puede proceder de datos proporcionados por el usuario, considere el uso de un procedimiento almacenado o una consulta SQL parametrizada en lugar de compilar la consulta con concatenaciones de cadenas.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="api_seguimiento.Models.Orden_de_compra_interna">
+       <Types>
+        <Type Name="Detalles_OCI" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#ConsultarProductos(System.Int32)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Revisar consultas SQL para comprobar si tienen vulnerabilidades de seguridad" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2019-02-15 00:03:49Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\programacion\api\api_seguiomiento\api_seguiomiento\Models\Orden_de_compra_interna" File="Detalles_OCI.cs" Line="31">La cadena de consulta pasada a 'SqlCommand.SqlCommand(string, SqlConnection)' en 'Detalles_OCI.ConsultarProductos(int)' podría contener las siguientes variables: 'folio'. Si alguna de estas variables puede proceder de datos proporcionados por el usuario, considere el uso de un procedimiento almacenado o una consulta SQL parametrizada en lugar de compilar la consulta con concatenaciones de cadenas.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="Revisar consultas SQL para comprobar si tienen vulnerabilidades de seguridad" Category="Microsoft.Security" CheckId="CA2100">
+   <Name>Revisar consultas SQL para comprobar si tienen vulnerabilidades de seguridad</Name>
+   <Description>Una cadena de comando SQL compilada a partir de datos proporcionados por el usuario es vulnerable a ataques pon inyección de código SQL. Microsoft SQL Server y otros servidores de bases de datos admiten procedimientos almacenados y consultas SQL parametrizadas, que reducen el riesgo de ataques por inyección.</Description>
+   <Resolution Name="WithNonLiterals">La cadena de consulta pasada a {0} en {1} podría contener las siguientes variables: {2}. Si alguna de estas variables puede proceder de datos proporcionados por el usuario, considere el uso de un procedimiento almacenado o una consulta SQL parametrizada en lugar de compilar la consulta con concatenaciones de cadenas.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182310.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="15.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Categoría</String>
+  <String Key="Certainty">Certeza</String>
+  <String Key="CollapseAll">Contraer todo</String>
+  <String Key="CheckId">Comprobar id.</String>
+  <String Key="Error">Error</String>
+  <String Key="Errors">errores</String>
+  <String Key="ExpandAll">Expandir todo</String>
+  <String Key="Help">Ayuda</String>
+  <String Key="Line">Línea</String>
+  <String Key="Messages">mensajes</String>
+  <String Key="LocationNotStoredInPdb">[Ubicación no almacenada en Pdb]</String>
+  <String Key="Project">Proyecto</String>
+  <String Key="Resolution">Resolución</String>
+  <String Key="Rule">Regla</String>
+  <String Key="RuleFile">Archivo de regla</String>
+  <String Key="RuleDescription">Descripción de la regla</String>
+  <String Key="Source">Origen</String>
+  <String Key="Status">Estado</String>
+  <String Key="Target">Círculos concéntricos</String>
+  <String Key="Warning">Advertencia</String>
+  <String Key="Warnings">advertencias</String>
+  <String Key="ReportTitle">Informe de análisis del código</String>
+ </Localized>
+</FxCopReport>
